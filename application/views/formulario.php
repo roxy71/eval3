@@ -21,9 +21,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </ul>
     
     <form class="form">
-      <input type="text" placeholder="primer nombre" class="textbox" />
-      <input type="text" placeholder="Apellido" class="textbox" />
-      <input type="text" placeholder="Direccion de Email" class="textbox" />
+      <input type="text" name="nombre1"  placeholder ="primer nombre" class="textbox" />
+      <input type="text" name="Apellido1" placeholder="Apellido" class="textbox" />
+      <input type="text" name="DirecciondeEmail" placeholder="Direccion de Email" class="textbox" />
       <input type="button" value="Next" class="button" />
     </form>
   </div>
