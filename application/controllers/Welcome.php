@@ -6,7 +6,7 @@ class Welcome extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->helper('form');
-		//$this->load->model('form_model');  
+		$this->load->model('form_model');  
 	}
 
 	public function index()
@@ -22,14 +22,20 @@ class Welcome extends CI_Controller {
 		//Aqui estamos recibiendo los datos del formulario eval3.php.
 
 		$name = $this->input->post('nombre1');
-		$lastname = $this->input->post('apellido1');
+		$lastname = $this->input->post('Apellido1');
         $correo = $this->input->post('DirecciondeEmail');
 
-		echo "Nombre: ".$name."  Apellido: ".$lastname;
+		echo "Nombre: ".$name."Apellido:".$lastname."correo:".$DirecciondeEmail;
 		//Aqui estamos creando el array
 
-		$data = array('nombre' => $this->input->post('nombre1'),'apellido' => $this->input->post('apellido1') );
+		$data = array('nombre' => $this->input->post('nombre1'),'Apellido' => $this->input->post('Apellido1'),'correo' => $this->input->post('DirecciondeEmail'));
+
     //Aqui se llama la funcion para guardar en la BD
 		$this->form_model->guardar($data);
+
 	}
 }
+
+
+
+?>
